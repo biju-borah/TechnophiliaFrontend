@@ -1,0 +1,96 @@
+.banner {
+  height: 100vh;
+  background-image: url(../assets/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.banner h1 {
+  text-align: center;
+  align-items: center;
+  padding-top: 10vh;
+  margin: 0px;
+  font-size: 40px;
+  color: white;
+}
+.banner h1 span {
+  font-size: 60px;
+
+  color: rgb(71, 211, 169);
+}
+.banner p {
+  color: rgb(141, 141, 141);
+  text-align: center;
+}
+.navbar-link {
+  list-style: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.navbar-link li {
+    margin: 15px;
+}
+
+.button-24 {
+    background: #47d3a9;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    /* box-shadow: rgb(0 0 0 / 10%) 1px 2px 4px; */
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    /* font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif; */
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    /* min-height: 40px; */
+    /* outline: 0; */
+    padding: 12px 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #47d3a9;
+}
+
+.button-24:active {
+  opacity: 0.5;
+}
+
+
+.button-15 {
+    background-image: linear-gradient(#61b0ec, #3b8ed1);
+    border: 1px solid #0077CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    direction: ltr;
+    display: block;
+    font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    padding: 12px 14px;
+  }
+  
+  .button-15:disabled {
+    cursor: default;
+    opacity: .3;
+  }
+  
+  .button-15:hover {
+    background-image: linear-gradient(#51A9EE, #147BCD);
+    border-color: #1482D0;
+    text-decoration: none;
+  }
+  
+  
