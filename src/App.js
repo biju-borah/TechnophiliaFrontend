@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Register from "./components/routes/Register";
 import Login from "./components/routes/Login";
-import Home from "./Home";
+import Home from "./components/pages/Home";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home />} />
           <Route path="register" element={<Register />} />
           <Route path="Login" element={<Login />} />
         </Routes>

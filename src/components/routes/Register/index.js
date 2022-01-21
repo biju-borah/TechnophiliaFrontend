@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Register.css'
+import './style.css'
 import { Link } from "react-router-dom";
 export class Register extends Component {
   render() {
