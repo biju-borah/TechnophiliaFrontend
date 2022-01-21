@@ -10,6 +10,14 @@ function Register() {
   const [id, setid] = useState('')
   const [name, setname] = useState('')
 
+  function registeruser(e) {
+    e.preventDefault();
+    db.collection("Students").add({
+      name: name,
+      password: password,
+    });
+  }
+
   return (
     <div className="container">
       <form className="form">
@@ -55,7 +63,7 @@ function Register() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block">
+        <button type="submit" className="btn btn-primary btn-block" onSubmit={(e) => registeruser(e)}>
           Sign Up
         </button>
         <p className="forgot-password text-right">

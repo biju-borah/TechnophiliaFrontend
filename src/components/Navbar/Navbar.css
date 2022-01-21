@@ -20,8 +20,8 @@
     margin: 0;
     padding: 0px 20px;
     align-items: center;
-    justify-content: end;
-    vertical-align: ce;
+    justify-content: flex-end;
+    vertical-align: center;
     /* text-decoration: none; */
     height: 10vh;
 }
