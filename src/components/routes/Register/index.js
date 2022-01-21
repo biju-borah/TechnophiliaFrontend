@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import db from "../../../database/FirebaseConfig.jsx";
 
 function Register() {
@@ -10,12 +10,18 @@ function Register() {
   const [id, setid] = useState('')
   const [name, setname] = useState('')
 
+  const navigate = useNavigate()
   function registeruser(e) {
     e.preventDefault();
     db.collection("Students").add({
       name: name,
       password: password,
+      id: id,
+      email: email
     });
+    console.log(name)
+    localStorage.setItem('name', name)
+    navigate('/')
   }
 
   return (
@@ -29,7 +35,7 @@ function Register() {
             type="text"
             className="form-control"
             placeholder="First name"
-            nChange={(e) => setname(e.target.value)}
+            onChange={(e) => setname(e.target.value)}
           />
         </div>
 
@@ -39,7 +45,7 @@ function Register() {
             type="text"
             className="form-control"
             placeholder="Last name"
-            nChange={(e) => setid(e.target.value)}
+            onChange={(e) => setid(e.target.value)}
           />
         </div>
 
@@ -49,7 +55,7 @@ function Register() {
             type="email"
             className="form-control"
             placeholder="Enter email"
-            nChange={(e) => setemail(e.target.value)}
+            onChange={(e) => setemail(e.target.value)}
           />
         </div>
 
@@ -59,11 +65,11 @@ function Register() {
             type="password"
             className="form-control"
             placeholder="Enter password"
-            nChange={(e) => setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block" onSubmit={(e) => registeruser(e)}>
+        <button type="submit" className="btn btn-primary btn-block" onClick={(e) => registeruser(e)}>
           Sign Up
         </button>
         <p className="forgot-password text-right">

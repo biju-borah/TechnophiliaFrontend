@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+
+  const [auth, setauth] = useState(false);
+  useEffect(() => {
+    let name = localStorage.getItem('name')
+    if (name) {
+      setauth(true)
+    }
+  }, []);
+
   return (
     <div className="banner">
       <h1>
@@ -11,19 +20,24 @@ const Hero = () => {
       </h1>
       <p>We specialize in blablabla</p>
       <ul className="navbar-link">
-        <li className="nav-item">
-          <a className="nav-link" to="/register">
-          <Link to="register" class="button-15" role="button">Sign up</Link>
-          </a>
+        {auth ? <li className="nav-item">
+          <span className="nav-link">
+            <Link to="dashboard" className="button-15" role="button">Go to Dashboard</Link>
+          </span>
         </li>
-        <li className="nav-item">
-          <a  to="/login">
-          <Link to="login" class="button-24" role="button">Log in</Link>
-         
-          </a>
-        </li>
+          :
+          <>
+            <li className="nav-item">
+              <span className="nav-link">
+                <Link to="register" className="button-15" role="button">Sign up</Link>
+              </span>
+            </li>
+            <li className="nav-item">
+              <Link to="login" className="button-24" role="button">Log in</Link>
+            </li>
+          </>
+        }
       </ul>
-
     </div>
   );
 };
