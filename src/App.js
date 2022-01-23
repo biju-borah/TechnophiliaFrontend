@@ -14,7 +14,11 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="register" element={<Register />} />
           <Route exact path="Login" element={<Login />} />
-          <Route exact path="dashboard" element={<Dashborard />} />
+          <Route exact path="dashboard/main" element={<Dashborard />} />
+          <Route exact path="dashboard/book" element={<Dashborard />} />
+          <Route exact path="dashboard/events" element={<Dashborard />} />
+          <Route exact path="dashboard/profile" element={<Dashborard />} />
+          <Route exact path="dashboard/settings" element={<Dashborard />} />
         </Routes>
       </BrowserRouter>
     </div>

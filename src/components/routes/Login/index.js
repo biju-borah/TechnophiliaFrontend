@@ -28,7 +28,7 @@ function Login() {
           if (data.password === password) {
             console.log('auth')
             localStorage.setItem('name', data.name)
-            navigate('/dashboard')
+            navigate('/dashboard/main')
           }
         }
       })

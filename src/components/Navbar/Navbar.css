@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   margin-bottom: 0;
   background-color: #47bbfd;
   text-decoration: none;
@@ -35,7 +36,7 @@ a{
 
 .navbar li a,
 .navbar .navbar-brand {
-  color: #fff !important;
+  color: #fff;
 }
 .navbar-nav li a:hover,
 .navbar-nav li.active a {

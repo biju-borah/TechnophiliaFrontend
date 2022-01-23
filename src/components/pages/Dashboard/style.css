@@ -1,0 +1,9 @@
+.dash-body{
+    margin: 0 0 0 240px
+}
+
+@media screen and (max-width:768px) {
+    .dash-body{
+        margin: 0;
+    }
+}

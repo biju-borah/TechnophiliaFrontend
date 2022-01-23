@@ -22,7 +22,7 @@ const Hero = () => {
       <ul className="navbar-link">
         {auth ? <li className="nav-item">
           <span className="nav-link">
-            <Link to="dashboard" className="button-15" role="button">Go to Dashboard</Link>
+            <Link to="dashboard/main" className="button-15" role="button">Go to Dashboard</Link>
           </span>
         </li>
           :
